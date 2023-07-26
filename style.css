@@ -67,6 +67,7 @@ body {
     background-color: hsl(206, 94%, 87%);
     color: black;
     border: 0;
+    cursor: pointer;
 }
 .step-det-1, .step-det-2, .step-det-3, .step-det-4 {
     height: 50px;
@@ -262,10 +263,12 @@ section {
     top: 1em;
     font-weight: 700;
     opacity: .5;
+    cursor: pointer;
 }
 .go-back-btn:hover {
     color: hsl(213, 96%, 18%);
     opacity: 1;
+    cursor: pointer;
 }
 
 .next-btn-2 {
@@ -276,10 +279,12 @@ section {
     border-radius: 6px;
     background-color: hsl(213, 96%, 18%);
     color:hsl(0, 0%, 100%);
+    cursor: pointer;
 }
 
 .next-btn-2:hover{
     background-color: hsl(243, 100%, 62%);
+    cursor: pointer;
 }
 
 
