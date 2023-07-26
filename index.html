@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <title>Frontend Mentor | Multi-step form</title>
+
+
+  
+</head>
+<body>
+  <main class="container">
+    <aside class="sidebar">
+      <div class="step-wrapper">
+        <div class="step-1">
+          <button class="num-1 active-btn" id="num1">1</button>
+          <div class="step-det-1">
+            <label>STEP 1</label>
+            <span>YOUR INFO</span>
+          </div>
+        </div>
+
+        <div class="step-2">
+          <button class="num-2">2</button>
+          <div class="step-det-2">
+            <label>STEP 2</label>
+            <span>SELECT PLAN</span>
+          </div>
+        </div>
+
+        <div class="step-3">
+          <button class="num-3">3</button>
+          <div class="step-det-3">
+            <label>STEP 3</label>
+            <span>ADD-ONS</span>
+          </div>
+        </div>
+
+        <div class="step-4">
+          <button class="num-4">4</button>
+          <div class="step-det-4">
+            <label>STEP 4</label>
+            <span>SUMMARY</span>
+          </div>
+        </div>
+
+      </div>
+
+    </aside>
+    <section>
+      <div class="section-container" id="info">
+        <h1>Personal Info</h1>
+        <span>Please provide your name, email address and phone number</span>
+        <div class="form-container">
+          <label for="name">Name
+            <span class="empty-name" id="empty-name">This field is required</span>
+          </label>
+          <input class="fname" type="text" id="name" name="name" placeholder="e.g Stephen King" required="required">
+          <br><br>
+          <label for="email">Email Address
+            <span class="empty-email" id="empty-email">This field is required</span>
+          </label>
+          <input class="femail" type="email" id="email" name="email" placeholder="e.g stephenking@lorem.com" required="required">
+          <br><br>
+          <label for="phone">Phone Number
+            <span class="empty-phone" id="empty-phone">This field is required</span>
+          </label>
+          <input class="fphone" type="text" id="phone" name="phone" placeholder="e.g +1 234 567 890" required="required">
+          <div class="btn-holder">
+            <button class="go-back-btn" id="info-bck"></button>
+            <button class="next-btn-2" id="info-nxt">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- plans -->
+
+      <div class="section-container hide" id="plan">
+        <h1>Select Your Plan</h1>
+        <span>You have the option of monthly or yearly billing</span>
+        
+        <div class="plans">
+          <div class="plan-container" id="monthly-plan">
+            <div class="arcade plan-select" id="arcade-month">
+              <img src="assets\images\icon-arcade.svg">
+              <label>Arcade
+                <span style="display: block; font-size: 13px;">$9/mo</span>
+              </label>
+            </div>
+            <div class="advanced" id="advanced-month">
+              <img src="assets\images\icon-advanced.svg">
+              <label>Advanced
+                <span style="display: block; font-size: 13px;">$12/mo</span>
+              </label>
+            </div>
+            <div class="pro" id="pro-month">
+              <img src="assets\images\icon-pro.svg">
+              <label>Pro
+                <span style="display: block; font-size: 13px;">$15/mo</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Yearly -->
+
+          <div class="plan-container" id="yearly-plan" style="display: none;">
+            <div class="arcade plan-select" id="arcade-year">
+              <img src="assets\images\icon-arcade.svg">
+              <label>Arcade
+                <span style="display: block; font-size: 13px;">$90/yr</span>
+                <span style="font-size: 12px; color: hsl(228, 45%, 44%); opacity: 1; font-weight: 500; ">
+                  2 months free</span>
+              </label>
+            </div>
+            <div class="advanced" id="advanced-year">
+              <img src="assets\images\icon-advanced.svg">
+              <label>Advanced
+                <span style="display: block; font-size: 13px;">$120/yr</span>
+                <span style="font-size: 12px; color: hsl(228, 45%, 44%); opacity: 1; font-weight: 500; ">
+                  2 months free</span>
+              </label>
+            </div>
+            <div class="pro" id="pro-year">
+              <img src="assets\images\icon-pro.svg">
+              <label>Pro
+                <span style="display: block; font-size: 13px;">$150/yr</span>
+                <span style="font-size: 12px; color: hsl(228, 45%, 44%); opacity: 1; font-weight: 500; ">
+                  2 months free
+                </span>
+              </label>
+            </div>
+          </div>
+          <!-- yearly -->
+          
+          <div class="toggle">
+            <input class="switch" type="checkbox">
+            <span class="monthly">Monthly</span>
+            
+            <span class="yearly">Yearly</span>
+          </div>
+          <div class="btn-holder">
+            <button class="go-back-btn" id="plan-bck">Go Back</button>
+            <button class="next-btn-2" id="plan-nxt">Next</button>
+          </div>
+          
+        </div>
+        
+      </div>
+
+      <!-- ADD-ONS -->
+
+      <div class="section-container hide" id="addon">
+        <h1>Pick add-ons</h1>
+        <span>Add-ons help enhance your gaming experience</span>
+        <div class="addon-container" id="addon-month">
+          <div class="on-service" id="on-service-mo">
+            <input class="addon-check" type="checkbox" id="on-service-check-mo">
+            <div class="lab-hold">
+              <label class="addon-label">
+              Online Service
+              <span class="addon-label-span">Access to multiplayer games</span>
+              </label>
+            </div>
+            <span class="addon-span" style="opacity:.8; font-weight:500;">+$1/mo</span>
+          </div>
+          <div class="large-sto" id="large-sto-mo">
+            <input class="addon-check" type="checkbox" id="large-sto-check-mo">
+            <div class="lab-hold">
+              <label class="addon-label">
+                Larger Storage
+                <span class="addon-label-span">Extra 1TB of cloud save</span>
+              </label>
+            </div>
+            <span class="addon-span" style="opacity:.8; font-weight:500;">+$2/mo</span>
+          </div>
+          <div class="custom" id="custom-mo">
+            <input class="addon-check" type="checkbox" id="custom-check-mo">
+            <div class="lab-hold">
+              <label class="addon-label">
+                Customizable Profile
+                <span class="addon-label-span">Custom theme on your profile</span>
+              </label>
+            </div>
+            <span class="addon-span" style="opacity:.8; font-weight:500;">+$2/mo</span>
+          </div>
+        </div>
+
+        <!-- for year -->
+
+        <div class="addon-container" style="display: none;" id="addon-year">
+          <div class="on-service" id="on-service-yr">
+            <input class="addon-check" type="checkbox" id="on-service-check-yr">
+            <div class="lab-hold">
+              <label class="addon-label">
+              Online Service
+              <span class="addon-label-span">Access to multiplayer games</span>
+              </label>
+            </div>
+            <span class="addon-span" style="opacity:.8; font-weight:500;">+$10/yr</span>
+          </div>
+          <div class="large-sto" id="large-sto-yr">
+            <input class="addon-check" type="checkbox" id="large-sto-check-yr">
+            <div class="lab-hold">
+              <label class="addon-label">
+                Larger Storage
+                <span class="addon-label-span">Extra 1TB of cloud save</span>
+              </label>
+            </div>
+            <span class="addon-span" style="opacity:.8; font-weight:500;">+$20/yr</span>
+          </div>
+          <div class="custom" id="custom-yr">
+            <input class="addon-check" type="checkbox" id="custom-check-yr">
+            <div class="lab-hold">
+              <label class="addon-label">
+                Customizable Profile
+                <span class="addon-label-span">Custom theme on your profile</span>
+              </label>
+            </div>
+            <span class="addon-span" style="opacity:.8; font-weight:500;">+$20/yr</span>
+          </div>
+        </div>
+        <div class="btn-holder">
+          <button class="go-back-btn" id="addon-bck">Go Back</button>
+          <button class="next-btn-2" id="addon-nxt">Next</button>
+        </div>
+
+        <!-- for year end -->
+      </div>
+
+
+      <!-- summary -->
+
+      <div class="section-container hide" id="summary">
+        <h1>Finishing Up</h1>
+        <span>Double-check everything looks good before you confirming</span>
+        <div class="summary-container" id="summary-cont">
+          <div class="ind-sum"
+          style="margin:40px 0; padding:15px; background-color:hsl(217, 100%, 97%); width:90%; border-radius:10px;">
+            <!--<div style="height: 50px;">
+              <label style="font-size:14px; font-weight:500; color: hsl(213, 96%, 18%); line-height:2;" id="summary-plan-name">
+                Arcade (Monthly)
+                <span style="float:right; font-size:14px; opacity:1; font-weight:500; position:relative; top:13px;" id="summary-plan-price">$9/mo</span>
+                <span style="display:block; font-size:12px;"><a style="color: black;" href="#">Change</a></span>
+              </label>
+            </div>
+            <hr>
+            <div style="height: 15px;">
+              <label style="font-size:12px; font-weight:500; color:black;">
+                <span style="opacity:0.5;">Online Service</span>
+                <span style="float:right; font-size:13px; font-weight:400; opacity:1; color: hsl(213, 96%, 18%);">$1/mo</span>
+              </label>
+            </div>
+            <hr>
+            <div style="height: 15px;">
+              <label style="font-size:12px; font-weight:500; color:black;">
+                <span style="opacity:0.5;">Larger Storage</span>
+                <span style="float:right; font-size:13px; font-weight:400; opacity:1; color: hsl(213, 96%, 18%);">$2/mo</span>
+              </label>
+            </div>-->
+          </div>
+<!--          <div class="total-sum">
+            <label style="font-size:12px; font-weight:500; color:black;">
+              <span style="opacity:0.5;">Total (per month)</span>
+              <span style="float:right; font-size:16px; font-weight:700; opacity:1; color:hsl(243, 100%, 62%)">$12/mo</span>
+            </label>
+          </div>-->
+        </div>
+
+        <div class="btn-holder">
+          <button class="go-back-btn" id="summary-bck">Go Back</button>
+          <button class="next-btn-2" id="summary-confirm">Confirm</button>
+        </div>
+      </div>
+
+      <div class="thank-you" id="thank-you" style="display: none">
+        <img src="assets\images\icon-thank-you.svg">
+        <h2>Thank You!</h2>
+        <span>
+          Thanks for confirming your subscription! We hope you have fun using our platform. 
+          If you ever need support, please feel free to email us at support@loremgaming.com
+        </span>
+      </div>
+
+    </section>
+  </main>
+  <script defer src="app.js"></script>
+</body>
+</html>

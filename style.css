@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+/*@media only print {
+    body {
+        visibility: hidden;
+    }
+    .summary-container {
+        visibility: visible;
+    }
+}*/
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    height: 50vh;
+    background: hsl(229, 24%, 87%);
+} 
+
+.hide {
+    display: none;
+}
+
+.container {
+    margin: 5% 20%;
+    height: 150%;
+    border-radius: 14px;
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    background: hsl(0, 0%, 100%);
+}
+
+.sidebar {
+    width: 30%;
+    border-radius: 10px;
+    background: url(assets/images/bg-sidebar-desktop.svg);
+    background-size: cover;
+    display: block;
+}
+
+.step-wrapper {
+    margin: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step-1, .step-2, .step-3, .step-4 {
+    display: flex;
+    gap: 20px;
+    align-content: center;
+}
+.num-1, .num-2, .num-3, .num-4 {
+    border: 2px solid hsl(206, 94%, 87%);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 700;
+    color: hsl(217, 100%, 97%);
+}
+.active-btn {
+    background-color: hsl(206, 94%, 87%);
+    color: black;
+    border: 0;
+}
+.step-det-1, .step-det-2, .step-det-3, .step-det-4 {
+    height: 50px;
+}
+.step-det-1 label, .step-det-2 label, .step-det-3 label, .step-det-4 label {
+    font-size: 11px;
+    font-weight: 400;
+    color: hsl(231, 100%, 99%);
+    opacity: 0.5;
+}
+.step-det-1 span, .step-det-2 span, .step-det-3 span, .step-det-4 span {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: hsl(231, 100%, 99%);
+}
+
+section {
+    width: 65%;
+}
+
+.section-container {
+    margin: 50px 50px;
+    line-height: 0.5;
+}
+
+.section-container h1 {
+    color: hsl(213, 96%, 18%);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.section-container span {
+    font-weight: 400;
+    opacity: 0.5;
+    line-height: 1;
+}
+
+.form-container {
+    margin: 40px 0;
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.fname, .femail, .fphone {
+    width: 90%;
+    padding: 10px 10px;
+    color: hsl(213, 96%, 18%);
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-block;
+    border-radius: 8px;
+    border-color: hsl(0, 0%, 0%, 0.1);
+}
+
+.form-container input[type=text]:focus, input[type=email]:focus {
+    border-color: hsl(243, 100%, 62%);
+    outline: none;
+}
+
+
+.form-container input[type=text]::placeholder , input[type=email]::placeholder{
+    opacity: 0.5;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.empty-name, .empty-email, .empty-phone {
+    position: relative;
+    float: right;
+    color: hsl(354, 84%, 57%);
+    opacity: 1;
+    display: none;
+}
+
+.empty-field {
+    border-color: hsl(354, 84%, 57%);
+}
+
+
+.plans {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0px;
+    gap: 30px;
+}
+.plans .plan-container {
+    display: flex;
+    gap: 15px;
+    
+}
+.arcade, .advanced, .pro {
+    padding: 20px;
+    height: 130px;
+    width: 100px;
+    border: 1px solid hsl(0, 0%, 0%, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.arcade img, .advanced img, .pro img {
+    width: 40px;
+    height: 40px;
+}
+.arcade label, .advanced label, .pro label {
+    font-size: 15px;
+    font-weight: 700;
+    color: hsl(213, 96%, 18%);
+    line-height: 2;
+}
+
+.plan-select, .arcade:hover, .advanced:hover, .pro:hover {
+    background-color: hsl(217, 100%, 97%);
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+.toggle {
+    border-radius: 5px;
+    background-color: hsl(217, 100%, 97%);
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    width: 95%;
+    height: 40px;
+}
+.toggle span {
+    font-size: 14px;
+    font-weight: 700;
+}
+.toggle .monthly {
+    order: 1;
+    color: hsl(213, 96%, 18%);
+    opacity: 1;
+}
+.toggle .yearly {
+    order: 3;
+    opacity: 0.5;
+}
+
+
+.switch {
+    -webkit-appearance: none;
+    position: relative;
+    width: 35px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: hsl(213, 96%, 18%);
+    cursor: pointer;
+    order: 2;
+}
+.switch::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    background-color: hsl(229, 24%, 87%);
+    transition: left 0.3s;
+}
+
+.switch:checked::after {
+    left: 70%;
+}
+
+.switch:checked + span {
+    color: black;
+    opacity: 0.5;   
+}
+.switch:checked + span + span {
+    color: hsl(213, 96%, 18%); 
+    opacity: 1;  
+}
+
+.btn-holder {
+    position: relative;
+    top: 40px;
+    padding-right: 18px;
+}
+
+.go-back-btn {
+    background: transparent;
+    border: none;
+    align-items: center;
+    position: relative;
+    top: 1em;
+    font-weight: 700;
+    opacity: .5;
+}
+.go-back-btn:hover {
+    color: hsl(213, 96%, 18%);
+    opacity: 1;
+}
+
+.next-btn-2 {
+    display: block;
+    float: right;
+    width: 120px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: hsl(213, 96%, 18%);
+    color:hsl(0, 0%, 100%);
+}
+
+.next-btn-2:hover{
+    background-color: hsl(243, 100%, 62%);
+}
+
+
+
+.addon-container {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.on-service, .large-sto, .custom {
+    width: 90%;
+    height: 40px;
+    border: 1px solid hsl(0, 0%, 0%, 0.2);
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.on-service:hover, .large-sto:hover, .custom:hover, .addon-select {
+    background-color: hsl(217, 100%, 97%);
+    border: 1px solid hsl(243, 100%, 62%);
+}
+.addon-check {
+    width: 16px;
+    height: 16px;
+}
+.lab-hold {
+    width: 200px;
+    position: relative;
+    left: -15%;
+}
+.addon-label {
+    line-height: 2;
+    color: hsl(213, 96%, 18%);
+    font-weight: 700;
+    font-size: 15px;
+}
+.addon-label-span {
+    display: block;
+    font-size: 12px;
+    color: black;
+    opacity: .5;
+}
+.addon-span {
+    color: hsl(243, 100%, 62%);
+    font-size: 13px;
+}
+
+
+
+.ind-sum {
+    margin: 40px 0;
+    padding: 15px;
+    background-color: hsl(217, 100%, 97%);
+    width: 90%;
+    border-radius: 10px;
+}
+.total-sum {
+    margin: 10px 0;
+    padding: 0 15px;
+    width: 90%;
+}
+
+
+.thank-you {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 150px;
+    margin-left: 20px;
+    margin-right: 50px;
+    padding: 30px 40px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.thank-you img {
+    width: 80px;
+    height: 80px;
+}
+.thank-you h2 {
+    color: hsl(213, 96%, 18%);
+}
+.thank-you span {
+    text-align: center;
+    opacity: 0.5;
+    font-size: 14px;
+    line-height: 1.5;
+}
